@@ -1,0 +1,185 @@
+:root {
+  --primary-color: #0d9488;
+  --primary-dark: #0f766e;
+  --primary-light: #ccfbf1;
+  --secondary-color: #0284c7;
+  --dark-bg: #0f172a;
+  --card-bg: #ffffff;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --border-color: #e2e8f0;
+  --danger-soft: #ffe4e6;
+  --danger-text: #e11d48;
+  --warning-soft: #fef3c7;
+  --warning-text: #d97706;
+  --success-soft: #dcfce7;
+  --success-text: #16a34a;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #f8fafc;
+  color: var(--text-main);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1 0 auto;
+}
+
+/* Custom Navbar */
+.navbar-custom {
+  background: #ffffff;
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+}
+
+.brand-logo {
+  font-weight: 800;
+  font-size: 1.35rem;
+  color: var(--primary-color) !important;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Cards & Grid */
+.medicine-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.medicine-card {
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  background: var(--card-bg);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.medicine-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(13, 148, 136, 0.08);
+}
+
+/* Dashboard Metric Cards */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+.stat-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.25rem;
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.stat-icon-wrapper {
+  width: 52px;
+  height: 52px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+/* Table Design */
+.custom-table {
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.custom-table th {
+  background-color: #f1f5f9;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  padding: 0.85rem 1rem;
+}
+
+.custom-table td {
+  padding: 0.85rem 1rem;
+  vertical-align: middle;
+}
+
+/* Custom Buttons */
+.btn-pharm {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  padding: 0.5rem 1.15rem;
+  transition: all 0.2s ease;
+}
+
+.btn-pharm:hover {
+  background-color: var(--primary-dark);
+  color: #ffffff;
+}
+
+.btn-pharm-outline {
+  border: 1.5px solid var(--primary-color);
+  color: var(--primary-color);
+  font-weight: 600;
+  border-radius: 8px;
+  background: transparent;
+  padding: 0.45rem 1.15rem;
+  transition: all 0.2s ease;
+}
+
+.btn-pharm-outline:hover {
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+
+/* Badge tags */
+.badge-soft-success {
+  background-color: var(--success-soft);
+  color: var(--success-text);
+}
+
+.badge-soft-warning {
+  background-color: var(--warning-soft);
+  color: var(--warning-text);
+}
+
+.badge-soft-danger {
+  background-color: var(--danger-soft);
+  color: var(--danger-text);
+}
+
+/* Auth Pages */
+.auth-container {
+  max-width: 440px;
+  margin: 3rem auto;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 2.25rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--border-color);
+}
